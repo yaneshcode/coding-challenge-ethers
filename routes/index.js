@@ -37,11 +37,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+// GET request that Takes a number and returns the BN representation
 router.get('/bn/:number', (request, response) => {
   let number = request.params.number;
-  console.log(number);
   let bn = ethers.utils.bigNumberify(number);
-  console.log(bn);
   response.send("String: " + bn.toString() + "\nHex: " + bn.toHexString());
 });
 
