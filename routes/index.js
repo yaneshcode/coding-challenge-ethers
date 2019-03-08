@@ -6,7 +6,7 @@ const provider = new ethers.getDefaultProvider('kovan');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Ethers coding challenge' });
 });
 
 // GET request that Takes a number and returns the BN representation
@@ -17,7 +17,7 @@ router.get('/bn/:number', (request, response) => {
 });
 
 // Get nonce of an address
-router.post('/getNonce', (request, response) => {
+router.post('/nonce', (request, response) => {
   let address = request.body.address;
   provider.getTransactionCount(address).then((transactionCount) => {
     console.log("Total Transactions Ever Sent: " + transactionCount);

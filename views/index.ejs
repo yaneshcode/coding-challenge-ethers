@@ -7,5 +7,14 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <p>
+      <h3>Get big number</h3>
+      <b>GET</b><i> http://localhost:3000/bn/:number</i>
+    </p>
+    <p>
+      <h3>Get nonce of address</h3>
+      <b>POST</b><i> /nonce</i>
+      curl -X POST "http://localhost:3000/nonce" -H "Content-Type: application/json" -d '{ "nonce": "0x0aF56716A76b160a67EE111FD620325ec5942a79" }'
+    </p>
   </body>
 </html>
